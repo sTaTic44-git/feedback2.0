@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: my-django-app   # replace with your app name on Render
-    env: python
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py migrate --noinput
-      python manage.py collectstatic --noinput
-    startCommand: gunicorn feedback_system.wsgi:application
